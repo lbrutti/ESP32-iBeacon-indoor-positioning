@@ -54,7 +54,7 @@ You need the following two libraries, both can be installed from the Arduino IDE
 * [PubSubClient](https://pubsubclient.knolleary.net)
 * [ESP32 BLE Arduino](https://github.com/nkolban/ESP32_BLE_Arduino)
 
-**Note!** See Troubleshooting section below in regards to PubSubClient and packet size.
+**Note!** See **Troubleshooting** section below in regards to `PubSubClient` and packet size (MQTT_MAX_PACKET_SIZE). There may be problems in sending too much data if a station finds too many beacons. Check the serial console for an ESP32 and make sure that it prints out `PUB Result: 1`. If it prints `PUB Result: 0` there may be a problem transmitting the json data to the MQTT server. This can be fixed by changing `MQTT_MAX_PACKET_SIZE` in the `PubSubClient` library.
 
 ### Setup and running
 #### Mosquitto MQTT Broker (server)
