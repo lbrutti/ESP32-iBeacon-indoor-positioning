@@ -40,14 +40,15 @@ class Satellite extends Component {
     render() {
         const {x, y, mac} = this.state;
         return (
-            <svg className="satellite-icon" width="60px"
-                 height="30px"
-                 x={x}
-                 y={y}
-                 onMouseDown={this.handleMouseDown}
-                 onMouseUp={this.handleMouseUp}>
+            <svg className="satellite-icon"
+                width="110px"
+                height="30px"
+                x={x}
+                y={y}
+                onMouseDown={this.handleMouseDown}
+                onMouseUp={this.handleMouseUp}>
                 <Bullseye />
-                <text x="0" y="30px">{mac.substr(9, 9).toUpperCase()}</text>
+                <text x="0" y="30px">{mac.toUpperCase()}</text>
             </svg>
         )
     }

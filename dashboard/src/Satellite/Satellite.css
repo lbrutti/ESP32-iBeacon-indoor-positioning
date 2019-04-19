@@ -4,7 +4,8 @@
 }
 .satellite-icon:hover text {
     font-weight: bold;
-    stroke: white;
+    /* stroke: white; */
     fill: black;
     opacity: 1;
+    font-size: 12px;
 }
