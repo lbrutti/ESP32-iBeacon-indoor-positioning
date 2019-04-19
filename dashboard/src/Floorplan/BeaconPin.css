@@ -1,0 +1,11 @@
+.beacon-icon text {
+    opacity: 0;
+    pointer-events: none;
+}
+.beacon-icon:hover text {
+    font-weight: bold;
+    /* stroke: white; */
+    fill: black;
+    opacity: 1;
+    font-size: 12px;
+}

@@ -7,13 +7,15 @@ import StreetView from '../SVGIconComponents/StreetView';
 //import Crosshairs from '../img/crosshairs.svg';
 //import Bullseye from '../img/bullseye.svg';
 
+import './BeaconPin.css';
+
 class Pin extends React.Component {
 
     render() {
-        let width = this.props.width || 40;
+        let width = this.props.width || 100;
         let height = this.props.height || 40;
         return (
-            <svg
+            <svg className="beacon-icon"
                  id={this.props.mac}
                  viewBox={"0 0 " + width + " " + height}
                  width={width}
@@ -22,6 +24,7 @@ class Pin extends React.Component {
                  y={this.props.y}
             >
                 <StreetView preserveAspectRatio="xMaxYMax meet"/>
+                <text x="0" y="40px">{this.props.mac.toUpperCase()}</text>
             </svg>
         );
     }
